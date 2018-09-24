@@ -1,38 +1,38 @@
 // registration code for industry partners post type
 function register_industrypartner_posttype() {
 	$labels = array(
-		'name' 				=> _x( 'Industry Partners', 'post type general name' ),
-		'singular_name'		=> _x( 'Industry Partner', 'post type singular name' ),
-		'add_new' 			=> __( 'Add New' ),
-		'add_new_item' 		=> __( 'Industry Partner' ),
-		'edit_item' 		=> __( 'Industry Partner' ),
-		'new_item' 			=> __( 'Industry Partner' ),
-		'view_item' 		=> __( 'Industry Partner' ),
-		'search_items' 		=> __( 'Industry Partner' ),
-		'not_found' 		=> __( 'Industry Partner' ),
+		'name' => _x( 'Industry Partners', 'post type general name' ),
+		'singular_name'	=> _x( 'Industry Partner', 'post type singular name' ),
+		'add_new' => __( 'Add New' ),
+		'add_new_item' => __( 'Industry Partner' ),
+		'edit_item' => __( 'Industry Partner' ),
+		'new_item' => __( 'Industry Partner' ),
+		'view_item' => __( 'Industry Partner' ),
+		'search_items' => __( 'Industry Partner' ),
+		'not_found' => __( 'Industry Partner' ),
 		'not_found_in_trash'=> __( 'Industry Partner' ),
 		'parent_item_colon' => __( 'Industry Partner' ),
-		'menu_name'			=> __( 'Industry Partners' )
+		'menu_name' => __( 'Industry Partners' )
 	);
 		
 	$taxonomies = array();	
 	$supports = array('title','editor','author','thumbnail','excerpt','revisions','post-formats');
 		
 	$post_type_args = array(
-		'labels' 			=> $labels,
-		'singular_label' 	=> __('Industry Partner'),
-		'public' 			=> true,
-		'show_ui' 			=> true,
-		'publicly_queryable'=> true,
-		'query_var'			=> true,
-		'capability_type' 	=> 'post',
-		'has_archive' 		=> true,
-		'hierarchical' 		=> false,
-		'rewrite' 			=> array('slug' => 'industrypartner', 'with_front' => false ),
-		'supports' 			=> $supports,
-		'menu_position' 	=> 6,
-		'menu_icon' 		=> '/wp-content/plugins/easy-content-types//includes/images/icon.png',
-		'taxonomies'		=> $taxonomies
+		'labels' => $labels,
+		'singular_label' => __('Industry Partner'),
+		'public' => true,
+		'show_ui' => true,
+		'publicly_queryable' => true,
+		'query_var' => true,
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'industrypartner', 'with_front' => false ),
+		'supports' => $supports,
+		'menu_position' => 6,
+		'menu_icon' => '/wp-content/plugins/easy-content-types//includes/images/icon.png',
+		'taxonomies' => $taxonomies
 	 );
 	register_post_type('industrypartner',$post_type_args);
 }
